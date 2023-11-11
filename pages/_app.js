@@ -1,6 +1,7 @@
 import 'prismjs/themes/prism.css'
 import 'react-notion-x/src/styles.css'
 import 'katex/dist/katex.min.css'
+import { Analytics } from '@vercel/analytics/react';
 import App from 'next/app'
 import '@/styles/globals.css'
 import '@/styles/notion.css'
@@ -15,7 +16,7 @@ import Scripts from '@/components/Scripts'
 const Ackee = dynamic(() => import('@/components/Ackee'), { ssr: false })
 const Gtag = dynamic(() => import('@/components/Gtag'), { ssr: false })
 
-export default function MyApp ({ Component, pageProps, config, locale }) {
+export default function MyApp({ Component, pageProps, config, locale }) {
   return (
     <ConfigProvider value={config}>
       <Scripts />
@@ -30,6 +31,7 @@ export default function MyApp ({ Component, pageProps, config, locale }) {
             )}
             {process.env.VERCEL_ENV === 'production' && config?.analytics?.provider === 'ga' && <Gtag />}
             <Component {...pageProps} />
+            <Analytics />
           </>
         </ThemeProvider>
       </LocaleProvider>
