@@ -33,7 +33,7 @@ const BLOG = {
       domainId: '' // e.g '0e2257a8-54d4-4847-91a1-0311ea48cc7b'
     },
     gaConfig: {
-      measurementId: 'G-WV23EXEF9X' // e.g: G-XXXXXXXXXX
+      measurementId: '' // e.g: G-XXXXXXXXXX
     }
   },
   comment: {
@@ -48,7 +48,7 @@ const BLOG = {
       distractionFreeMode: false
     },
     utterancesConfig: {
-      repo: 'hhmy27/hhmy27.github.io'    
+      repo: 'hhmy27/hhmy27.github.io'
     },
     cusdisConfig: {
       appId: '', // data-app-id
